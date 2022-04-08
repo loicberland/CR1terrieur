@@ -1,0 +1,130 @@
+:root{
+    --secondary-bgc-color : #f0f0f0;
+    --primary-bgc-color : #aabcbf;
+    --primary-color : #aabcbf;
+    --primary-light-color : #fff;
+    --primary-dark-color: #000;
+    --title--font-family: 'Cabin', sans-serif;
+    --primary--font-family: 'Nunito', sans-serif;
+}
+html{
+    font-size: medium;
+}
+a{
+    color: var(--primary-dark-color);
+}
+body{
+    font-family: var(--primary--font-family);
+}
+
+.header{
+    background-color: var(--primary-bgc-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav{
+    background-color: var(--primary-bgc-color);
+    display: none;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 1rem;
+    padding-right: 2rem;
+}
+.nav__burger {
+    font-size: 30px;
+    color: var(--primary-light-color);
+    cursor: pointer;
+}
+.nav__burger-toggle{
+    display: none;
+}
+.nav__navbar{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--secondary-bgc-color);
+    gap: 1rem;
+    flex-direction: column;
+}
+.nav__burger-toggle:checked + .nav {
+    width: 100%;
+    display: flex;
+}
+.nav__navbar-link:hover{
+    color: var(--primary-color);
+}
+.nav__contact{
+    display: none;
+}
+.nav__contact-mail:hover{
+    color: var(--primary-color);
+}
+.header__brand{
+    display: block;
+    width: 20vw;
+}
+.header_title{
+    text-align: center;
+    color: var(--primary-light-color);
+    font-size: 1rem;
+    font-style: italic;
+    font-weight: lighter;
+}
+
+.footer{
+    background-color: var(--secondary-bgc-color);
+    display: flex;
+    flex-direction: column;
+}
+.footer__about{
+    padding: 0 2rem ;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.footer__about-logo{
+    width: 10vw;
+}
+.footer__about-type{
+    font-family: var(--title--font-family);
+    text-align: center;
+    font-size: 1.6rem;
+}
+.footer__about-title{
+    margin-bottom: 0.8rem;
+}
+.footer__about-contact{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 0.3rem;
+}
+.footer__about-mail:hover{
+    color: var(--primary-color);
+}
+.footer__about-insta{
+    background-image: url(../img/Instagram.webp);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 20px;
+}
+
+@keyframes backgroundIMG-insta {
+    100% { background-image: url(../img/580b57fcd9996e24bc43c521.png); }
+  }
+
+.footer__about-insta:hover{
+  animation: backgroundIMG-insta 300ms linear;
+  animation-fill-mode: forwards;
+}
+
+.footer__legal{
+    margin: 2rem 0 1rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.footer__legal-start-text a:hover{
+    color: var(--primary-color);
+}
