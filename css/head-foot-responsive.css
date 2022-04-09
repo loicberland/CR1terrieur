@@ -70,10 +70,6 @@
     .header_title{
         font-size: 1.5rem;
     }
-    .nav__contact{
-        display: flex;
-        gap: 1rem;
-    }
     .footer__about-type{
         font-size: 1.6rem;
     }

@@ -2,3 +2,21 @@ html,body,p,ol,ul,li,dl,dt,dd,blockquote,figure,fieldset,legend,textarea,pre,ifr
 a{
     text-decoration: none;
 }
+:root{
+    --secondary-bgc-color : #f0f0f0;
+    --primary-bgc-color : #aabcbf;
+    --primary-color : #aabcbf;
+    --primary-light-color : #fff;
+    --primary-dark-color: #000;
+    --title--font-family: 'Cabin', sans-serif;
+    --primary--font-family: 'Nunito', sans-serif;
+}
+html{
+    font-size: medium;
+}
+a{
+    color: var(--primary-dark-color);
+}
+body{
+    font-family: var(--primary--font-family);
+}
