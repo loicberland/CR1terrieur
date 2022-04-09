@@ -20,21 +20,24 @@ body{
 .header{
     background-color: var(--primary-bgc-color);
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    padding: 0 2rem;
 }
 .nav{
     background-color: var(--primary-bgc-color);
     display: none;
     justify-content: space-between;
     flex-direction: column;
-    padding: 1rem;
-    padding-right: 2rem;
+    width: 100vw;
 }
 .nav__burger {
+    text-align: center;
     font-size: 30px;
     color: var(--primary-light-color);
     cursor: pointer;
+    margin: 1.5rem 0;
+    width: 100%;
 }
 .nav__burger-toggle{
     display: none;
@@ -44,11 +47,11 @@ body{
     flex-wrap: wrap;
     background-color: var(--secondary-bgc-color);
     gap: 1rem;
+    padding: 1rem;
     flex-direction: column;
 }
-.nav__burger-toggle:checked + .nav {
-    width: 100%;
-    display: flex;
+.nav__burger-toggle:checked ~ .nav {
+    display: block;
 }
 .nav__navbar-link:hover{
     color: var(--primary-color);
@@ -61,7 +64,7 @@ body{
 }
 .header__brand{
     display: block;
-    width: 20vw;
+    width: 30vw;
 }
 .header_title{
     text-align: center;

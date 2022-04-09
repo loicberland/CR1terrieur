@@ -1,0 +1,42 @@
+/* Hamburger Icon */
+.menu-icon,
+.menu-icon:before,
+.menu-icon:after {
+    background: var(--primary-light-color);
+    border-radius: 0.05em;
+    height: 0.14em;
+    transition: all 0.2s ease-in-out;
+    width: 100%;
+}
+.menu-icon {
+    display: inline-block;
+    margin: 0.4em 0;
+    max-width: 1em;
+    position: relative;
+}
+.menu-icon:before,
+.menu-icon:after {
+    content: '';
+    left: 0;
+    position: absolute;
+}
+.menu-icon:before {
+    top: -0.4em;
+}
+.menu-icon:after {
+    bottom: -0.4em;
+}
+/* Close Icon */
+.nav__burger-toggle:checked ~ .nav__burger .menu-icon {
+    background: transparent;
+}
+
+.nav__burger-toggle:checked ~ .nav__burger .menu-icon:before {
+    top: 0;
+    transform: rotate(-45deg);
+}
+
+.nav__burger-toggle:checked ~ .nav__burger .menu-icon:after {
+    bottom: 0;
+    transform: rotate(45deg);
+}
