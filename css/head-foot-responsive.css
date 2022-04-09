@@ -27,6 +27,22 @@
         margin-bottom: 1rem;
     }    
 }
+@media screen and (min-width:800px) {
+    .footer__about-logo{
+        display: flex;
+    }
+    .footer__about{
+        padding-top: 1rem ;
+        display: flex;
+    }
+    .footer__about-type{
+        font-size: 1.2rem;
+    }
+    .footer__about-contact{
+        gap: 0.3rem;
+    }
+}
+
 @media screen and (min-width:950px) {
     .header{
         padding: 5rem 0 2rem;
@@ -54,5 +70,8 @@
     .nav__contact{
         display: flex;
         gap: 1rem;
+    }
+    .footer__about-type{
+        font-size: 1.6rem;
     }
 }
