@@ -5,6 +5,9 @@
     .nav{
         display: flex;
         width: 100%;
+        visibility: visible;
+        opacity: 1;
+        height: auto;
     }    
     .nav__burger, .nav__burger-toggle{
         display: none;

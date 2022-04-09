@@ -24,12 +24,20 @@ body{
     align-items: center;
     padding: 0 2rem;
 }
+@keyframes anime-menu-in {
+    100% { opacity: 0; visibility: hidden;}
+}
 .nav{
     background-color: var(--primary-bgc-color);
     display: none;
     justify-content: space-between;
     flex-direction: column;
     width: 100vw;
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+    animation: anime-menu-in 500ms linear;
+    animation-fill-mode: forwards;
 }
 .nav__burger {
     text-align: center;
@@ -49,8 +57,14 @@ body{
     gap: 1rem;
     padding: 1rem;
     flex-direction: column;
+    text-align: center;
+}
+@keyframes anime-menu-out {
+    100% { opacity: 1; visibility: visible;}
 }
 .nav__burger-toggle:checked ~ .nav {
+    animation: anime-menu-out 500ms linear;
+    animation-fill-mode: forwards;
     display: block;
 }
 .nav__navbar-link:hover{
@@ -116,7 +130,7 @@ body{
 
 @keyframes backgroundIMG-insta {
     100% { background-image: url(../img/580b57fcd9996e24bc43c521.png); }
-  }
+}
 
 .footer__about-insta:hover{
   animation: backgroundIMG-insta 300ms linear;
