@@ -1,5 +1,6 @@
 @media screen and (min-width:450px ) {   
     .header{
+        flex-direction: column;
         padding: 0;
     }
     .nav{
@@ -18,7 +19,13 @@
         flex-direction: row;
         justify-content: center;
     }    
+    .nav__contact{
+        padding-top: 0;
+        flex-direction: row;
+        text-align: center;
+    }
     .header__brand{
+        display: block;
         width: 25vw;
     }
     .nav__burger {
@@ -26,9 +33,13 @@
         margin: 0;
     }
     .header_title{
+        display: block;
         font-size: 1.2em;
         margin-bottom: 1rem;
-    }    
+    }   
+    .header__full-brand{
+        display: none;
+    } 
 }
 @media screen and (min-width:800px) {
     .footer__about-logo{
@@ -42,16 +53,17 @@
         display: flex;
     }
     .footer__about-type{
-        font-size: 1.2rem;
+        font-size: 1.4rem;
     }
     .footer__about-contact{
-        gap: 0.3rem;
+        font-size: 0.8rem;
+        /* gap: 0.3rem; */
     }
 }
 
 @media screen and (min-width:950px) {
     .header{
-        padding: 5rem 0 2rem;
+        padding: 2rem 0 2rem;
         display:block;
     }
     .nav{
@@ -59,10 +71,15 @@
         position: fixed;
         top: 0;
         flex-direction: row;
-        padding: 1rem;
-        padding-right: 2rem;
+        padding: 0.5rem 1.5rem;
         align-items: center;
     }    
+    .nav__navbar{
+        padding: 0;
+    }
+    .nav__contact{
+        padding-bottom: 0;
+    }
     .nav__burger-toggle:checked ~ .nav {
         display: flex;
     }

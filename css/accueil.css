@@ -1,3 +1,7 @@
+.acceuil__quote{
+    text-align: center;
+    margin: 2rem auto 4rem;
+}
 .acceuil__who{
     background-color: var(--primary-bgc-color);
     color: var(--primary-light-color);
