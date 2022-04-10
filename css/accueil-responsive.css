@@ -1,0 +1,29 @@
+@media  screen and (min-width:700px) {
+    .accueil__cards{
+        justify-content: space-around;
+    }
+    .card{
+        width: 40%;
+        font-size: 1.5rem;
+    }
+    
+}
+
+@media  screen and (min-width:1000px) {
+    .accueil__cards{
+        width: 85vw;
+        margin: 0 auto;
+    }
+    .accueil__cards{
+        justify-content: center;
+    }
+    .card{
+        width: 20%;
+    }
+    .acceuil__who{
+        background-size: contain;
+    }
+    
+}
+
+

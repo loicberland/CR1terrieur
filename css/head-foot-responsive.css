@@ -34,6 +34,9 @@
     .footer__about-logo{
         display: flex;
     }
+    .footer__about-title{
+        display: none;
+    }
     .footer__about{
         padding-top: 1rem ;
         display: flex;
@@ -73,4 +76,11 @@
     .footer__about-type{
         font-size: 1.6rem;
     }
+}
+
+@media screen and  (min-width:1400px) {
+    html{
+        font-size:larger;
+    }
+    
 }
