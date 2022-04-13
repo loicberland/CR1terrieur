@@ -6,25 +6,29 @@
     background-color: var(--primary-bgc-color);
     color: var(--primary-light-color);
     text-align: center;
-    padding: 2rem;
+    padding: 3rem 2rem 7rem;
     background-image: url(../img/LOGO_Vierge\ -\ Haut.png);
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: cover;
-    font-size: 2rem;
+    font-size: 1.7rem;
 }
 .acceuil__who-title{
     font-family: var(--title--font-family);
+    color: var(--primary-light-color);
     text-transform: uppercase;
+    letter-spacing: 0.4rem;
     margin-bottom: 2rem;
 }
 .acceuil__who-text{
-    font-size: 0.6em;
+    color: var(--primary-light-color);
+    font-size: 0.5em;
     line-height: 2rem;
     margin-bottom: 2rem;
 }
 .acceuil__who-place{
-    font-size: 0.6em;
+    color: var(--primary-light-color);
+    font-size: 0.5em;
 }
 .accueil__cards{
     padding: 3rem 2rem;
@@ -51,6 +55,8 @@
 .card__title{
     text-align: center;
     font-family: var(--title--font-family);
+    text-transform: uppercase;
+    letter-spacing: 0.15rem;
     margin-bottom: 1rem;
 }
 .card__text{

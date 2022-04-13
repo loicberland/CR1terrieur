@@ -19,7 +19,7 @@
     content: '';
     left: 0;
     position: absolute;
-    transition: 500ms;
+    transition: 300ms;
 }
 .menu-icon:before {
     top: -0.4em;
