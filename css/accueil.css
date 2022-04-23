@@ -65,3 +65,76 @@
     text-align: center;
     font-size: 0.8em;
 }
+
+.carrousel{
+    position: relative;
+    margin: 50px auto;
+    height: 600px;
+    overflow: hidden;
+}
+.carrousel__container{
+    width: calc(11 * 100vw);
+    height: 600px;
+}
+.carrousel__img{
+    width: 100vw;
+    height: 600px;
+    display: inline-block;
+    background-size: cover;
+    background-position: center;
+}
+.carrousel__img1{
+    background-image: url(/img/carrousel/1.jpg);
+}
+.carrousel__img2{
+    background-image: url(/img/carrousel/2.jpg);
+}
+.carrousel__img3{
+    background-image: url(/img/carrousel/3.jpg);
+}
+.carrousel__img4{
+    background-image: url(/img/carrousel/4.jpg);
+}
+.carrousel__img5{
+    background-image: url(/img/carrousel/5.jpg);
+}
+.carrousel__img6{
+    background-image: url(/img/carrousel/6.png);
+}
+.carrousel__img7{
+    background-image: url(/img/carrousel/7.jpg);
+}
+.carrousel__img8{
+    background-image: url(/img/carrousel/8.jpg);
+}
+.carrousel__img9{
+    background-image: url(/img/carrousel/9.jpg);
+}
+.carrousel__img10{
+    background-image: url(/img/carrousel/10.jpg);
+}
+.carrousel__img11{
+    background-image: url(/img/carrousel/11.jpg);
+}
+
+.carrousel__nav{
+    position: absolute;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+}
+.carrousel__link{
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.3) ;
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 25px;
+    transition: 200ms;
+    margin: 0.15rem;
+}
+.carrousel__link:hover, .carrousel__active{
+    background-color: var(--primary-light-color) ;
+}
+.carrousel__link:hover{
+    transform: scale(1.3);
+}

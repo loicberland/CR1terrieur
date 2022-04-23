@@ -14,6 +14,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"> 
 
+    <script src="/js/app.js" defer></script>
+
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/hamburger-icon.css">
     <link rel="stylesheet" href="./css/head-foot.css">
@@ -24,91 +26,204 @@
     <title>CR1terieur</title>
 </head>
 <body>
-    <header class="header">
-        <img class="header__brand" src="./img/LOGO_Vierge.png" alt="Logo CR">
-        <img class="header__full-brand" src="./img/LOGO.png" alt="Logo CR Concepteur, Aménageur d'intérieur">
-        <h1 class="header__title">Concepteur, Aménageur d'intérieur</h1>
-        <input class="nav__burger-toggle" type="checkbox" id="responsive-menu">
-        <label for="responsive-menu" class="nav__burger" ><span class="menu-icon"></span></label>
-        <nav class="nav">
-            <ul class="nav__navbar">
-                <li class="nav__navbar-list"><a class="nav__navbar-link" href="./index.html">Accueil</a></li>
-                <li class="nav__navbar-list"><a class="nav__navbar-link" href="./index.html">Prestations</a></li>
-                <li class="nav__navbar-list"><a class="nav__navbar-link" href="./index.html">Réalisation</a></li>
-                <li class="nav__navbar-list"><a class="nav__navbar-link" href="./index.html">À propos</a></li>
-                <li class="nav__navbar-list"><a class="nav__navbar-link" href="./index.html">Contact</a></li>
-            </ul>
-            <div class="nav__contact">
-                <a class="nav__contact-mail" href="mailto:cr_interieur@hotmail.com">cr_interieur@hotmail.com</a>
-                <span class="nav__contact-phone">06 69 07 32 64</span>
+    <div class="legal hide-display" id="mention">    
+        <div class="legal__container">
+            <div class="close">
+                <span class="close__icon"></span>
             </div>
-        </nav>
-    </header>
-    <main class="accueil">
-        <!-- <div></div> carousel-->
-        <p class="acceuil__quote">‘’ La passion, la technique et l’expérience ’’</p>
-        <section class="acceuil__who">
-            <h2 class="acceuil__who-title">POUR QUI, POUR QUOI</h2>
-            <p class="acceuil__who-text">Pour les particuliers et professionnels indépendants <br> Pour les petits, moyens et grands projets</p>
-            <p class="acceuil__who-place">Lyon et sa région</p>
-        </section>
-        <section class="accueil__cards">
-            <article class="card">
-                <img class="card__img" src="./img/Agencement sur mesure.JPG" alt="">
-                <h3 class="card__title">AGENCEMENT SUR MESURE</h3>
-                <p class="card__text">Cuisine, meuble vasque, dressing, tête de lit, bibliothèque, bureau, cheminée, escalier ...</p>
-            </article>
-            <article class="card">
-                <img class="card__img" src="./img/reamenagement espace int.jpg" alt="">
-                <h3 class="card__title">RÉAMÉNAGEMENT DES ESPACES INTÉRIEURS</h3>
-                <p class="card__text">Ouverture d’une cuisine sur séjour,
-                    Création d’une suite parentale, d’une chambre bébé, d’une dépendance pour la location,
-                    Redistribution et optimisation des pièces ...</p>
-            </article>
-            <article class="card">
-                <img class="card__img" src="./img/renovation dinterieur.jpg" alt="">
-                <h3 class="card__title">RÉNOVATION D’INTÉRIEUR</h3>
-                <p class="card__text">Modernisation d’une salle de bain, changement des revêtements de sols,
-                    amélioration énergétique, rénovation totale d’une habitation ...</p>
-            </article>
-            <article class="card">
-                <img class="card__img" src="./img/dossier de plans de permis.jpg" alt="">
-                <h3 class="card__title">DOSSIER DE PLANS DE PERMIS DE CONSTRUIRE *</h3>
-                <p class="card__text">Extension, intégration d’une véranda, création d’une baie vitrée, modification de façade, démolition ...
-                    <br>
-                    * Plans réglementaires, photos et notice nécessaires aux dossiers de demande de permis de construire ou déclaration préalable de travaux d'une surface habitable inférieure à 150m.</p>
-            </article>
-        </section>
-
-
-
-
-
-    </main>
-    <footer class="footer">
-        <div class="footer__about">
-            <h2 class="footer__about-title">CR Concepteur, Aménageur d'intérieur</h2>
-            <img class="footer__about-logo" src="./img/LOGO.png" alt="Logo CR Concepteur, Aménageur d'intérieur">
-            <div class="footer__about-type">
-                <h4 class="footer__about-who">- Architecte d'intérieur -</h4>
-                <p class="footer__about-place">Lyon et sa région</p>
+            <h1 class="legal__title">MENTIONS LÉGALES</h1>
+            <h2 class="legal__subtitle">1. Responsable du site Internet</h2>
+            <p class="legal__text">Propriété du Site https://cr1terieur.com :</p>
+            <p class="legal__text">Céline Rivoire, gérante de CR Concepteur, aménageur d'intérieur.</p>
+            <p class="legal__text">Tel : 06 69 07 32 64</p>
+            <p class="legal__text">Email : cr_interieur@hotmail.com</p>
+            <p class="legal__text">151 rue des acacias 69210 Saint Pierre la Palud</p>
+            <p class="legal__text">Site hébergé par :</p>
+            <p class="legal__text">Wix - Wix Online Platform Limited - 1 Grant’s Row, Dublin 2 D02HX96, Ireland - Téléphone : Veuillez cliquer ici.</p>
+            <h2 class="legal__subtitle">2. Statut administratif et facturation</h2>
+            <p class="legal__text">Raison sociale : CALAD’IMPULSION – CR Concepteur, aménageur d'intérieur</p>
+            <p class="legal__text">Siège social : 847 Route de Frans 69400 Villefranche sur Saône</p>
+            <p class="legal__text">Numéro de RCS : RCS 404 681 306 Villefranche Tarare</p>
+            <p class="legal__text">Numéro de SIRET : 404 681 306 00043 - Numéro de SIREN : 404 681 306 - Capital social : 3.240€ - Numéro de TVA : FR 78 404 681 306</p>
+            <h2 class="legal__subtitle">3. Conditions générales d’utilisation</h2>
+            <p class="legal__text">Votre utilisation de ce site web induit votre acceptation des conditions générales et mentions d’avertissement.</p>
+            <p class="legal__text">Ce site peut contenir des liens vers d’autres sites web. CR Concepteur, aménageur d'intérieur n’assume aucune responsabilité sur le contenu des sites autres que ceux faisant partie du domaine https://cr1terieur.com.</p>
+            <p class="legal__text">L’ensemble de ce site relève de la législation française et internationale sur le droit d’auteur et la propriété intellectuelle.</p>
+            <p class="legal__text">Tous les droits de reproduction sont réservés, y compris pour les documents téléchargeables, les représentations iconographiques et photographiques, ainsi que les contenus rédactionnels. Les marques citées appartiennent à leurs propriétaires respectifs.</p>
+            <p class="legal__text">La reproduction de tout ou partie de ce site sur un support électronique quel qu’il soit est formellement interdite sauf autorisation expresse du propriétaire du site internet. Vous vous engagez à ne pas utiliser ce site à des fins illicites ou interdites par les lois ou par les mentions légales et contractuelles.</p>
+            <h2 class="legal__subtitle">4. Respect de la vie privée</h2>
+            <p class="legal__text">Conformément à la loi « Informatique et Liberté » du 06 Janvier 1978, vous disposez d’un droit d’accès et de rectification des données vous concernant. Pour cela il suffit de nous contacter (en nous indiquant vos coordonnées et le cas échéant votre n° client.).</p>
+            <h2 class="legal__subtitle">5. Droit d’auteur – Copyright</h2>
+            <p class="legal__text">Tous les éléments de toute nature (images fixes, images animées, photographies, bases de données, marques, illustrations, logos, dessins, modèles, documents téléchargeable, etc) contenus dans le site https://cr1terieur.com sont protégés par le droit d’auteur. A ce titre, sauf autorisation préalable et écrite de CR Concepteur, aménageur d'intérieur, toute reproduction, représentation, adaptation, modification partielle ou intégrale de tout élément composant le site, par quelque moyen que ce soit, est interdite sous peine de poursuite judiciaire.</p>
+            <h2 class="legal__subtitle">6. Description des services fournis</h2>
+            <p class="legal__text">Le site Internet https://cr1terieur.com a pour objet de fournir une information concernant l’ensemble des activités de la société. CR Concepteur, aménageur d'intérieur s’efforce de fournir sur le site  https://cr1terieur.com des informations aussi précises que possible. Toutefois, il ne pourra être tenu responsable des oublis, des inexactitudes et des carences dans la mise à jour, qu’elles soient de son fait ou du fait des tiers partenaires qui lui fournissent ces informations.</p>
+            <p class="legal__text">Toutes les informations indiquées sur le site https://cr1terieur.com sont données à titre indicatif, et sont susceptibles d’évoluer. Par ailleurs, les renseignements figurant sur le site https://cr1terieur.com ne sont pas exhaustifs. Ils sont donnés sous réserve de modifications ayant été apportées depuis leur mise en ligne.</p>
+            <h2 class="legal__subtitle">7. Liens hypertextes</h2>
+            <p class="legal__text">Tout site Internet est autorisé à établir, sans accord préalable, un lien vers les informations diffusées sur le site de CR Concepteur, aménageur d'intérieur. Néanmoins, les pages et les documents issus de https://cr1terieur.com ne doivent pas être imbriqués à l’intérieur des pages d’un autre site (iframe).</p>
+            <p class="legal__text">L’autorisation de mise en place d’un lien est valable pour tout support, à l’exception de ceux diffusant des informations à caractère polémique, pornographique, xénophobe ou pouvant, dans une plus large mesure, porter atteinte à la sensibilité du plus grand nombre.</p>
+            <p class="legal__text">CR Concepteur, aménageur d'intérieur ne peut, en aucun cas, être tenu pour responsable des informations diffusées sur les sites qui font l’objet d’un lien hypertexte à partir de https://cr1terieur.com.</p>
+            <h2 class="legal__subtitle">8. Garanties et responsabilités</h2>
+            <p class="legal__text">Les informations diffusées sur le site de CR Concepteur, aménageur d'intérieur  sont fournies sans garantie d’aucune sorte, autre que celles prévues par la loi en vigueur, et notamment sans garantie que le contenu réponde aux besoins de l’utilisateur ou à l’usage qu’il sera amené en faire. L’utilisateur est seul responsable de toute utilisation qu’il fera des informations diffusées sur https://cr1terieur.com.</p>
+            <p class="legal__text">CR Concepteur, aménageur d'intérieur ne pourra pas être tenue responsable des dommages directs ou indirects résultant de l’usage de son site ou d’autres sites qui lui sont liés, et notamment des éventuelles pertes financières ou préjudices commerciaux pouvant en résulter.</p>
+        </div>    
+    </div>
+    <div class="legal hide-display" id="politique">    
+        <div class="legal__container">
+            <div class="close">
+                <span class="close__icon"></span>
             </div>
-            <div class="footer__about-contact">
-                <a class="footer__about-mail" href="mailto:cr_interieur@hotmail.com">cr_interieur@hotmail.com</a>
-                <span class="footer__about-phone">06 69 07 32 64</span>
-                <p class="footer__about-adress">69210 Saint Pierre la Palud</p>
-                <a class="footer__about-insta" target="_blank" href="https://www.instagram.com/cr_interieur/"></a>
+            <h1 class="legal__title">POLITIQUE DE CONFIDENTIALITÉ</h1>
+            <h2 class="legal__subtitle">1. Gestion des données personnelles</h2>
+            <p class="legal__text">Le client est informé des réglementations concernant la communication marketing, la loi du 21 Juin 2014 pour la confiance dans l’Economie Numérique, la Loi Informatique et Liberté du 06 Août 2004 ainsi que du Règlement Général sur la Protection des Données (RGPD : n° 2016-679).</p>
+            <h2 class="legal__subtitle">2. Responsable de la collecte des données personnelles</h2>
+            <p class="legal__text">Pour les Données Personnelles collectées dans le cadre de la création du compte personnel de l’Utilisateur et de sa navigation sur le Site, le responsable du traitement des Données Personnelles est : CR Concepteur, Aménageur d'intérieur</p>
+            <p class="legal__text">En tant que responsable du traitement des données qu’elle collecte, CR Concepteur, Aménageur d'intérieur s’engage à respecter le cadre des dispositions légales en vigueur. Il lui appartient notamment d’établir les finalités de ses traitements de données, de fournir à ses prospects et clients une information complète sur le traitement de leurs données personnelles ainsi que de maintenir un registre des traitements conforme à la réalité. Chaque fois que CR Concepteur, Aménageur d'intérieur traite des Données Personnelles, nous prenons toutes les mesures raisonnables pour s’assurer de l’exactitude et de la pertinence des Données Personnelles au regard des finalités pour lesquelles elle les traite.</p>
+            <h2 class="legal__subtitle">3. Collecte des renseignements personnels</h2>
+            <p class="legal__text">Les données et renseignements personnels qui peuvent être collectés via le site https://cr1terieur.com sont les suivants :</p>
+            <p class="legal__text">– Nom</p>
+            <p class="legal__text">– Prénom</p>
+            <p class="legal__text">– Adresse électronique</p>
+            <p class="legal__text">– Numéro de téléphone</p>
+            <p class="legal__text">– Type de projet</p>
+            <p class="legal__text">– Message complétant la demande</p>
+            <p class="legal__text">Les renseignements personnels que nous collectons sont recueillis au travers de formulaires (formulaire de contact, commentaires sur instagram…) et grâce à l’interactivité établie entre vous et notre site Web (notamment via des outils d’analyse comme Google Analytics).</p>
+            <p class="legal__text">Cependant, d’autres informations peuvent être collectées par la suite si une relation commerciale vient à se créer entre CR Concepteur, Aménageur d'intérieur et l’utilisateur (pour une demande de devis par exemple) :</p>
+            <p class="legal__text">– Nom de l’entreprise</p>
+            <p class="legal__text">– Statut</p>
+            <p class="legal__text">– Adresse postale</p>
+            <p class="legal__text">– Numéro Siret</p>
+            <h2 class="legal__subtitle">4. Finalité des données collectées</h2>
+            <p class="legal__text">CR Concepteur, Aménageur d'intérieur est susceptible de traiter tout ou partie des données pour:</p>
+            <p class="legal__text">permettre la navigation sur le Site et la gestion et la traçabilité des prestations et services commandés par l’utilisateur : données de connexion et d’utilisation du Site, facturation, historique des commandes, etc.</p>
+            <p class="legal__text">prévenir et lutter contre la fraude informatique (spamming, hacking…) : matériel informatique utilisé pour la navigation, l’adresse IP, le mot de passe (hashé).</p>
+            <p class="legal__text">améliorer la navigation sur le Site : données de connexion et d’utilisation.</p>
+            <p class="legal__text">mener des enquêtes de satisfaction facultatives sur https://cr1terieur.com  : adresse email.</p>
+            <p class="legal__text">mener des campagnes de communication (sms, mail) : numéro de téléphone, adresse email.</p>
+            <p class="legal__text">CR Concepteur, Aménageur d'intérieur ne commercialise pas vos données personnelles qui sont donc uniquement utilisées par nécessité ou à des fins statistiques et d’analyses.</p>
+            <h2 class="legal__subtitle">5. Droit d’accès, de rectification, d’opposition et de retrait</h2>
+            <p class="legal__text">Conformément à la réglementation européenne en vigueur, les Utilisateurs de https://cr1terieur.com disposent des droits suivants :</p>
+            <p class="legal__text underline">Droit d’accès</p>
+            <p class="legal__text">Nous reconnaissons un droit d’accès et de rectification aux personnes concernées désireuses de consulter, modifier, voire radier les informations les concernant. Pour pouvoir exercer ces droits, contactez : cr_interieur@hotmail.com</p>
+            <p class="legal__text underline">Droit d’opposition et de retrait</p>
+            <p class="legal__text">Nous vous offrons un droit d’opposition et de retrait quant à vos renseignements personnels. Le droit d’opposition s’entend comme étant la possibilité offerte aux internautes de refuser que leurs renseignements personnels soient utilisées à certaines fins mentionnées lors de la collecte. Pour pouvoir exercer ces droits, contactez : cr_interieur@hotmail.com</p>
+            <p class="legal__text underline">Droit de rectification</p>
+            <p class="legal__text">Nous nous engageons à vous offrir un droit de rectification quant à vos renseignements personnels.  Le droit de rectification s’entend comme étant la possibilité offerte aux internautes de modifier les renseignements personnels confiés à CR Concepteur, Aménageur d'intérieur. Dans ce cas, l’Utilisateur doit indiquer les Données Personnelles qu’il souhaiterait que CR Concepteur, Aménageur d'intérieur corrige ou mette à jour. Pour pouvoir exercer ces droits, contactez : cr_interieur@hotmail.com</p>
+            <h2 class="legal__subtitle">6. Non-communication des données personnelles</h2>
+            <p class="legal__text">Nous promettons de ne pas commercialiser les renseignements personnels collectés.</p>
+            <p class="legal__text">CR Concepteur, Aménageur d'intérieur reste cependant libre du choix de ses sous-traitants techniques et commerciaux à la condition qu’il présentent les garanties suffisantes au regard des exigences du Règlement Général sur la Protection des Données (RGPD : n° 2016-679).</p>
+            <p class="legal__text">CR Concepteur, Aménageur d'intérieur s’engage à prendre toutes les précautions nécessaires afin de préserver la sécurité des Informations et notamment qu’elles ne soient pas communiquées à des personnes non autorisées. Cependant, si un incident impactant l’intégrité ou la confidentialité des Informations du Client est portée à la connaissance de CR Concepteur, Aménageur d'intérieur, celle-ci devra dans les meilleurs délais informer le Client et lui communiquer les mesures de corrections prises. Par ailleurs CR Concepteur, Aménageur d'intérieur ne collecte aucune « données sensibles ».</p>
+            <h2 class="legal__subtitle">7. Cookies</h2>
+            <p class="legal__text">La navigation sur le site https://cr1terieur.com peut entraîner l’installation de cookie(s) sur l’ordinateur de l’utilisateur, qui enregistre des informations relatives à sa navigation. Les cookies ont, entre autres, vocation à mesurer la fréquentation du site internet. </p>
+            <p class="legal__text">CR Concepteur, Aménageur d'intérieur est susceptible de traiter les informations de l’utilisateur concernant sa visite du site, telles que les pages consultées, les recherches effectuées. Ces informations permettent à CR Concepteur, Aménageur d'intérieur d’améliorer le contenu du site, de la navigation de l’utilisateur. </p>
+            <p class="legal__text">À tout moment, l’utilisateur peut faire le choix d’exprimer et de modifier ses souhaits en matière de Cookies.</p>
+            <p class="legal__text">Le refus d’installation d’un cookie peut entraîner l’impossibilité d’accéder à certains services. L’utilisateur peut toutefois configurer son ordinateur de la manière suivante, pour refuser l’installation des cookies :</p>
+            <p class="legal__text">Sous Internet Explorer : onglet outil (pictogramme en forme de rouge en haut a droite) / options internet. Cliquez sur Confidentialité et choisissez Bloquer tous les cookies. Validez sur Ok.</p>
+            <p class="legal__text">Sous Firefox : en haut de la fenêtre du navigateur, cliquez sur le bouton Firefox, puis aller dans l’onglet Options. Cliquer sur l’onglet Vie privée. Paramétrez les Règles de conservation sur : utiliser les paramètres personnalisés pour l’historique. Enfin décochez-la pour désactiver les cookies.</p>
+            <p class="legal__text">Sous Safari : Cliquez en haut à droite du navigateur sur le pictogramme de menu (symbolisé par un rouage). Sélectionnez Paramètres. Cliquez sur Afficher les paramètres avancés. Dans la section « Confidentialité », cliquez sur Paramètres de contenu. Dans la section « Cookies », vous pouvez bloquer les cookies.</p>
+            <p class="legal__text">Sous Chrome : Cliquez en haut à droite du navigateur sur le pictogramme de menu (symbolisé par trois lignes horizontales). Sélectionnez Paramètres. Cliquez sur Afficher les paramètres avancés. Dans la section « Confidentialité », cliquez sur préférences. Dans l’onglet « Confidentialité », vous pouvez bloquer les cookies.</p>
+        </div>    
+    </div>
+    <div id="body">
+        <header class="header">
+            <img class="header__brand" src="./img/LOGO_Vierge.png" alt="Logo CR">
+            <img class="header__full-brand" src="./img/LOGO.png" alt="Logo CR Concepteur, Aménageur d'intérieur">
+            <h1 class="header__title">Concepteur, Aménageur d'intérieur</h1>
+            <input class="nav__burger-toggle" type="checkbox" id="responsive-menu">
+            <label for="responsive-menu" class="nav__burger" ><span class="menu-icon"></span></label>
+            <nav class="nav">
+                <ul class="nav__navbar">
+                    <li class="nav__navbar-list"><a class="nav__navbar-link" href="./index.html">Accueil</a></li>
+                    <li class="nav__navbar-list"><a class="nav__navbar-link" href="./index.html">Prestations</a></li>
+                    <li class="nav__navbar-list"><a class="nav__navbar-link" href="./index.html">Réalisation</a></li>
+                    <li class="nav__navbar-list"><a class="nav__navbar-link" href="./index.html">À propos</a></li>
+                    <li class="nav__navbar-list"><a class="nav__navbar-link" href="./index.html">Contact</a></li>
+                </ul>
+                <div class="nav__contact">
+                    <a class="nav__contact-mail" href="mailto:cr_interieur@hotmail.com">cr_interieur@hotmail.com</a>
+                    <span class="nav__contact-phone">06 69 07 32 64</span>
+                </div>
+            </nav>
+        </header>
+        <main class="accueil">
+            <div id="main-carrousel" class="carrousel">
+                <div class="carrousel__container">
+                    <div class="carrousel__img carrousel__img1"></div>
+                    <div class="carrousel__img carrousel__img2"></div>
+                    <div class="carrousel__img carrousel__img3"></div>
+                    <div class="carrousel__img carrousel__img4"></div>
+                    <div class="carrousel__img carrousel__img5"></div>
+                    <div class="carrousel__img carrousel__img6"></div>
+                    <div class="carrousel__img carrousel__img7"></div>
+                    <div class="carrousel__img carrousel__img8"></div>
+                    <div class="carrousel__img carrousel__img9"></div>
+                    <div class="carrousel__img carrousel__img10"></div>
+                    <div class="carrousel__img carrousel__img11"></div>
+                </div>
             </div>
-        </div>
-        <div class="footer__legal">
-            <p class="footer__legal-start-text">Directeur de la publication : RIVOIRE Céline / © 2022 par CR Concepteur, Aménageur d'intérieur / 
-                <a class="footer__legal-confidencial" href="./html/legals.html">Politique de confidentialité</a>
-                <span> / </span>
-                <a class="footer__legal-mention" href="./html/legals.html">Mentions légales</a>
-            </p>
-            <p class="footer__legal-end-text">Raison sociale : Calad’impulsion – CR Concepteur, aménageur d'intérieur / Numéro de SIRET : 404 681 306 00043/p>
-        </div>
+            <p class="acceuil__quote">‘’ La passion, la technique et l’expérience ’’</p>
+            <section class="acceuil__who">
+                <h2 class="acceuil__who-title">POUR QUI, POUR QUOI</h2>
+                <p class="acceuil__who-text">Pour les particuliers et professionnels indépendants <br> Pour les petits, moyens et grands projets</p>
+                <p class="acceuil__who-place">Lyon et sa région</p>
+            </section>
+            <section class="accueil__cards">
+                <article class="card">
+                    <img class="card__img" src="./img/Agencement sur mesure.JPG" alt="">
+                    <h3 class="card__title">AGENCEMENT SUR MESURE</h3>
+                    <p class="card__text">Cuisine, meuble vasque, dressing, tête de lit, bibliothèque, bureau, cheminée, escalier ...</p>
+                </article>
+                <article class="card">
+                    <img class="card__img" src="./img/reamenagement espace int.jpg" alt="">
+                    <h3 class="card__title">RÉAMÉNAGEMENT DES ESPACES INTÉRIEURS</h3>
+                    <p class="card__text">Ouverture d’une cuisine sur séjour,
+                        Création d’une suite parentale, d’une chambre bébé, d’une dépendance pour la location,
+                        Redistribution et optimisation des pièces ...</p>
+                </article>
+                <article class="card">
+                    <img class="card__img" src="./img/renovation dinterieur.jpg" alt="">
+                    <h3 class="card__title">RÉNOVATION D’INTÉRIEUR</h3>
+                    <p class="card__text">Modernisation d’une salle de bain, changement des revêtements de sols,
+                        amélioration énergétique, rénovation totale d’une habitation ...</p>
+                </article>
+                <article class="card">
+                    <img class="card__img" src="./img/dossier de plans de permis.jpg" alt="">
+                    <h3 class="card__title">DOSSIER DE PLANS DE PERMIS DE CONSTRUIRE *</h3>
+                    <p class="card__text">Extension, intégration d’une véranda, création d’une baie vitrée, modification de façade, démolition ...
+                        <br>
+                        * Plans réglementaires, photos et notice nécessaires aux dossiers de demande de permis de construire ou déclaration préalable de travaux d'une surface habitable inférieure à 150m.</p>
+                </article>
+            </section>
+    
+    
+    
+    
+    
+        </main>
+        <footer class="footer">
+            <div class="footer__about">
+                <h2 class="footer__about-title">CR Concepteur, Aménageur d'intérieur</h2>
+                <img class="footer__about-logo" src="./img/LOGO.png" alt="Logo CR Concepteur, Aménageur d'intérieur">
+                <div class="footer__about-type">
+                    <h4 class="footer__about-who">- Architecte d'intérieur -</h4>
+                    <p class="footer__about-place">Lyon et sa région</p>
+                </div>
+                <div class="footer__about-contact">
+                    <a class="footer__about-mail" href="mailto:cr_interieur@hotmail.com">cr_interieur@hotmail.com</a>
+                    <span class="footer__about-phone">06 69 07 32 64</span>
+                    <p class="footer__about-adress">69210 Saint Pierre la Palud</p>
+                    <a class="footer__about-insta" target="_blank" href="https://www.instagram.com/cr_interieur/"></a>
+                </div>
+            </div>
+            <div class="footer__legal">
+                <p class="footer__legal-start-text">Directeur de la publication : RIVOIRE Céline / © 2022 par CR Concepteur, Aménageur d'intérieur / 
+                    <a id="politique-confidence" href="#" class="footer__legal-confidencial">Politique de confidentialité</a>
+                    <span> / </span>
+                    <a id="mention-legal" href="#" class="footer__legal-mention">Mentions légales</a>
+                </p>
+                <p class="footer__legal-end-text">Raison sociale : Calad’impulsion – CR Concepteur, aménageur d'intérieur / Numéro de SIRET : 404 681 306 00043/p>
+            </div>
+        </footer>
 
-    </footer>
+    </div>
 </body>
 </html>

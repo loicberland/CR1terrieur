@@ -30,4 +30,9 @@ a{
 }
 body{
     font-family: var(--primary--font-family);
+    /* width: 100vw; */
+}
+
+.underline{
+    text-decoration: underline;
 }
