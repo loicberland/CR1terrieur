@@ -68,7 +68,7 @@
 
 .carrousel{
     position: relative;
-    margin: 50px auto;
+    /* margin: 50px auto; */
     height: 600px;
     overflow: hidden;
 }
@@ -77,9 +77,9 @@
     height: 600px;
 }
 .carrousel__img{
+    float: left;
     width: 100vw;
     height: 600px;
-    display: inline-block;
     background-size: cover;
     background-position: center;
 }

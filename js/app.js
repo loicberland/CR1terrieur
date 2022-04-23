@@ -61,6 +61,8 @@ var carrouselElement = {
 var carrousel = {
   init(){
     this.drawNavBtn(this.images.length,this.carrouselId);
+
+    this.moveSwap();
   },
   carrouselId : carrouselElement.carrousel,
   carrousetContainer : carrouselElement.getFirstChild(),
@@ -77,19 +79,30 @@ var carrousel = {
     }
     where.appendChild(ul);
   },
-  swapLeft(position,nbrSwap){
-    if(position < this.images.length){
-      let translate = position*(-this.decalagePosition) + nbrSwap*(-this.decalagePosition);
-      this.carrousetContainer.style.transform = 'translateX(' + translate + 'vw)';
-      position += nbrSwap;
-    }
+  moveSwap(){
+    document.addEventListener('keyup',function(e){
+      if (e.key === 'ArrowLeft'){
+        carrousel.position = carrousel.swapLeft(carrousel.position,1);
+      }else if(e.key === 'ArrowRight'){
+        carrousel.position = carrousel.swapRight(carrousel.position,1);
+      }
+    });
   },
-  swapRight(position,nbrSwap){
+  swapLeft(position,nbrSwap){
     if(position > 0){
       let translate = position*(-this.decalagePosition) + nbrSwap*(this.decalagePosition);
-      this.carrousetContainer.style.transform = 'translateX(' + translate + 'vw)';
+      this.carrousetContainer.style.transform = 'translateX(' + (translate) + 'vw)';
+      position -= nbrSwap;
+    }
+    return position;
+  },
+  swapRight(position,nbrSwap){
+    if(position < this.images.length-1){
+      let translate = position*(-this.decalagePosition) + nbrSwap*(-this.decalagePosition);
+      this.carrousetContainer.style.transform = 'translateX(' + (translate) + 'vw)';
       position += nbrSwap;
     }
+    return position;
   },
 };
 carrousel.init();
