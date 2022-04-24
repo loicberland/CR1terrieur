@@ -75,6 +75,7 @@
 .carrousel__container{
     width: calc(11 * 100vw);
     height: 600px;
+    transition: 1000ms;
 }
 .carrousel__img{
     float: left;

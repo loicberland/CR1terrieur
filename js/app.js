@@ -37,17 +37,6 @@ var legal = {
 };
 legal.init();
 
-/*
-récupérer toutes les images du carrousel dans un tableau
-récupérer la longueur du tableau en paramètre (nombre d'image)
-créer x bouton en fonction du nombre d'image 
-fonction pour swap à droite
-  on fais un transform: translateX(100vw); * le numéro d'index
-fonction pour swap à gauche
-  on fais un transform: translateX(-100vw); * le numéro d'index
-fonction au clic sur un bouton pour afficher l'image qui correspond
-fonction qui défile les image 1 par 1 au bout d'un délai
-*/
 var carrouselElement = {
   carrousel : document.getElementById('main-carrousel'),
   getFirstChild(){
@@ -60,33 +49,68 @@ var carrouselElement = {
 
 var carrousel = {
   init(){
-    this.drawNavBtn(this.images.length,this.carrouselId);
-
-    this.moveSwap();
+    this.btn=this.drawNavBtn(this.images.length,this.carrouselId);
+    carrousel.btnActive(carrousel.position);
+    this.moveSwapBtn();    
+    setInterval(() => {
+      this.SwapAuto();
+    }, carrousel.delayAutoSwap);    
   },
   carrouselId : carrouselElement.carrousel,
   carrousetContainer : carrouselElement.getFirstChild(),
   images : carrouselElement.getImg(),
+  btn : '',
   position : 0,
   decalagePosition : 100,
+  delayAutoSwap : 2000,
   drawNavBtn(nbrBtn,where){
     let ul = document.createElement('ul');
     ul.className = 'carrousel__nav';
-    for (let i = 0; i < nbrBtn-1; i++) {
+    for (let i = 0; i < nbrBtn; i++) {
       let li = document.createElement('li');
       li.className = 'carrousel__link';
       ul.appendChild(li);
     }
     where.appendChild(ul);
+    return(ul);
   },
-  moveSwap(){
+  moveSwapArrow(){
     document.addEventListener('keyup',function(e){
       if (e.key === 'ArrowLeft'){
         carrousel.position = carrousel.swapLeft(carrousel.position,1);
       }else if(e.key === 'ArrowRight'){
         carrousel.position = carrousel.swapRight(carrousel.position,1);
       }
-    });
+      carrousel.btnActive(carrousel.position);
+    });    
+  },
+  moveSwapBtn(){
+    let li = carrousel.btn.querySelectorAll('.carrousel__link');
+    for (let i = 0; i < li.length; i++) {
+      li[i].addEventListener('click',function(){
+        let dec = Math.abs(carrousel.position - i);
+        if (i < carrousel.position){
+          carrousel.position = carrousel.swapLeft(carrousel.position,dec);
+        }else if(i > carrousel.position){
+          carrousel.position = carrousel.swapRight(carrousel.position,dec);
+        }
+        carrousel.btnActive(carrousel.position);
+      });    
+    }
+  },
+  SwapAuto(){
+    let position = carrousel.position;
+    if(carrousel.position===carrousel.images.length){
+      // position = 0;
+      carrousel.position = carrousel.swapLeft(0,carrousel.images.length);
+      console.log('left : ' + carrousel.images.length);
+    }else{
+      // position++;
+      carrousel.position = carrousel.swapRight(position,1);
+      console.log('right : ' + position);
+    }
+    console.log(carrousel.images.length);
+    // carrousel.position = position;
   },
   swapLeft(position,nbrSwap){
     if(position > 0){
@@ -103,6 +127,18 @@ var carrousel = {
       position += nbrSwap;
     }
     return position;
+  },
+  btnActive(position){
+    let li = carrousel.btn.querySelectorAll('.carrousel__link');
+    for (let i = 0; i < li.length; i++) {
+      if(i===position){
+        if (!li[i].classList.contains('carrousel__active')) {
+          li[i].classList.add('carrousel__active');
+        }
+      }else if(li[i].classList.contains('carrousel__active')){
+        li[i].classList.remove('carrousel__active');
+      }
+    }
   },
 };
 carrousel.init();
