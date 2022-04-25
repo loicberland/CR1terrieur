@@ -49,12 +49,16 @@ var carrouselElement = {
 
 var carrousel = {
   init(){
-    this.btn=this.drawNavBtn(this.images.length,this.carrouselId);
-    carrousel.btnActive(carrousel.position);
-    this.moveSwapBtn();    
-    setInterval(() => {
-      this.SwapAuto();
-    }, carrousel.delayAutoSwap);    
+    this.width = this.makeSizeContainer(this.carrousetContainer);
+    this.createArray(this.decalageImages,this.images.length);
+    this.moveSwapArrow();
+    // this.makePosition(this.images);
+    this.btn=this.drawNavBtn(this.images.length,this.carrouselId);    
+    // carrousel.btnActive(carrousel.position);
+    // this.moveSwapBtn();    
+    // setInterval(() => {
+    //   this.SwapAuto();
+    // }, carrousel.delayAutoSwap);    
   },
   carrouselId : carrouselElement.carrousel,
   carrousetContainer : carrouselElement.getFirstChild(),
@@ -63,12 +67,33 @@ var carrousel = {
   position : 0,
   decalagePosition : 100,
   delayAutoSwap : 2000,
+  width : 0,
+  decalageImages : [],
+  makeSizeContainer(container){
+    container.style.width = carrousel.images.length * carrousel.decalagePosition + 'vw';
+    return(carrousel.images.length * carrousel.decalagePosition);
+  },
+  createArray(array,size,initValue =0){
+    for (let i = 0; i < size; i++) {
+      array.push(initValue);
+    }
+  },
+  // makePosition(images){
+  //   for (let i = 0; i < images.length; i++) {
+  //     if(i===images.length-1){
+  //       images[i].style.transform = 'translateX(-' + carrousel.width + 'vw)';
+  //     }
+  //   }
+  // },
   drawNavBtn(nbrBtn,where){
     let ul = document.createElement('ul');
     ul.className = 'carrousel__nav';
     for (let i = 0; i < nbrBtn; i++) {
       let li = document.createElement('li');
       li.className = 'carrousel__link';
+      if(i === carrousel.position){
+        li.classList.add('carrousel__active');
+      }
       ul.appendChild(li);
     }
     where.appendChild(ul);
@@ -77,9 +102,9 @@ var carrousel = {
   moveSwapArrow(){
     document.addEventListener('keyup',function(e){
       if (e.key === 'ArrowLeft'){
-        carrousel.position = carrousel.swapLeft(carrousel.position,1);
+        carrousel.swapLeft(carrousel.images,2);
       }else if(e.key === 'ArrowRight'){
-        carrousel.position = carrousel.swapRight(carrousel.position,1);
+        carrousel.swapRight(carrousel.images,2);
       }
       carrousel.btnActive(carrousel.position);
     });    
@@ -100,33 +125,53 @@ var carrousel = {
   },
   SwapAuto(){
     let position = carrousel.position;
-    if(carrousel.position===carrousel.images.length){
-      // position = 0;
-      carrousel.position = carrousel.swapLeft(0,carrousel.images.length);
-      console.log('left : ' + carrousel.images.length);
+    if(carrousel.position===carrousel.images.length-1){
+      carrousel.position = carrousel.swapLeft(position,carrousel.images.length-1);
     }else{
-      // position++;
       carrousel.position = carrousel.swapRight(position,1);
-      console.log('right : ' + position);
     }
-    console.log(carrousel.images.length);
-    // carrousel.position = position;
+    carrousel.btnActive(carrousel.position);
   },
-  swapLeft(position,nbrSwap){
-    if(position > 0){
-      let translate = position*(-this.decalagePosition) + nbrSwap*(this.decalagePosition);
-      this.carrousetContainer.style.transform = 'translateX(' + (translate) + 'vw)';
-      position -= nbrSwap;
+  swapRight(images,nbrSwap){
+    for (let i = 0; i < images.length; i++) {
+      let min = (i+1) * (-carrousel.decalagePosition);
+      let max = ((images.length-2) * carrousel.decalagePosition) - (i * carrousel.decalagePosition);
+      if(carrousel.decalageImages[i] - (nbrSwap*carrousel.decalagePosition) < min){
+        carrousel.decalageImages[i] = max - ((nbrSwap*carrousel.decalagePosition)-(carrousel.decalageImages[i]-min)-100);
+        images[i].style.transform = 'translateX(' + carrousel.decalageImages[i] + 'vw)';
+      }else{        
+        carrousel.decalageImages[i]-= nbrSwap*carrousel.decalagePosition;
+        images[i].style.transform = 'translateX(' + carrousel.decalageImages[i] + 'vw)';
+      }
     }
-    return position;
+    if(carrousel.position + nbrSwap > images.length-1){
+      carrousel.position=carrousel.position-(images.length-1) + (nbrSwap-1);
+    }else{
+      carrousel.position+=nbrSwap;
+    }
   },
-  swapRight(position,nbrSwap){
-    if(position < this.images.length-1){
-      let translate = position*(-this.decalagePosition) + nbrSwap*(-this.decalagePosition);
-      this.carrousetContainer.style.transform = 'translateX(' + (translate) + 'vw)';
-      position += nbrSwap;
+  swapLeft(images,nbrSwap){
+    for (let i = 0; i < images.length; i++) {
+      let min = (i+1) * (-carrousel.decalagePosition);
+      let max = ((images.length-2) * carrousel.decalagePosition) - (i * carrousel.decalagePosition);
+      if(i===images.length-1 && carrousel.decalageImages[0] === 100){
+        carrousel.decalageImages[i] = min;
+        images[i].style.transform = 'translateX(' + carrousel.decalageImages[i] + 'vw)';
+      }
+      if(carrousel.decalageImages[i] +(nbrSwap*carrousel.decalagePosition) > max){
+        //calcul pas encore bon pour le left multi swap
+        carrousel.decalageImages[i] = min - ((nbrSwap*carrousel.decalagePosition)-(max - carrousel.decalageImages[i])-100);
+        images[i].style.transform = 'translateX(' + carrousel.decalageImages[i] + 'vw)';
+      }else{        
+        carrousel.decalageImages[i]+= carrousel.decalagePosition;
+        images[i].style.transform = 'translateX(' + carrousel.decalageImages[i] + 'vw)';
+      }
     }
-    return position;
+    if(carrousel.position - nbrSwap < 0){
+      carrousel.position=carrousel.position+images.length-1 - (nbrSwap-1);
+    }else{
+      carrousel.position-=nbrSwap;
+    }
   },
   btnActive(position){
     let li = carrousel.btn.querySelectorAll('.carrousel__link');
