@@ -52,13 +52,11 @@ var carrousel = {
     this.width = this.makeSizeContainer(this.carrousetContainer);
     this.createArray(this.decalageImages,this.images.length);
     this.moveSwapArrow();
-    // this.makePosition(this.images);
     this.btn=this.drawNavBtn(this.images.length,this.carrouselId);    
-    // carrousel.btnActive(carrousel.position);
-    // this.moveSwapBtn();    
-    // setInterval(() => {
-    //   this.SwapAuto();
-    // }, carrousel.delayAutoSwap);    
+    this.moveSwapBtn();    
+    setInterval(() => {
+      this.SwapAuto();
+    }, carrousel.delayAutoSwap);    
   },
   carrouselId : carrouselElement.carrousel,
   carrousetContainer : carrouselElement.getFirstChild(),
@@ -66,7 +64,7 @@ var carrousel = {
   btn : '',
   position : 0,
   decalagePosition : 100,
-  delayAutoSwap : 2000,
+  delayAutoSwap : 5000,
   width : 0,
   decalageImages : [],
   makeSizeContainer(container){
@@ -78,13 +76,6 @@ var carrousel = {
       array.push(initValue);
     }
   },
-  // makePosition(images){
-  //   for (let i = 0; i < images.length; i++) {
-  //     if(i===images.length-1){
-  //       images[i].style.transform = 'translateX(-' + carrousel.width + 'vw)';
-  //     }
-  //   }
-  // },
   drawNavBtn(nbrBtn,where){
     let ul = document.createElement('ul');
     ul.className = 'carrousel__nav';
@@ -115,9 +106,9 @@ var carrousel = {
       li[i].addEventListener('click',function(){
         let dec = Math.abs(carrousel.position - i);
         if (i < carrousel.position){
-          carrousel.position = carrousel.swapLeft(carrousel.position,dec);
+          carrousel.swapLeft(carrousel.images,dec);
         }else if(i > carrousel.position){
-          carrousel.position = carrousel.swapRight(carrousel.position,dec);
+          carrousel.swapRight(carrousel.images,dec);
         }
         carrousel.btnActive(carrousel.position);
       });    
@@ -125,17 +116,17 @@ var carrousel = {
   },
   SwapAuto(){
     let position = carrousel.position;
-    if(carrousel.position===carrousel.images.length-1){
-      carrousel.position = carrousel.swapLeft(position,carrousel.images.length-1);
+    if(position===carrousel.images.length-1){
+      carrousel.swapLeft(carrousel.images,carrousel.images.length-1);
     }else{
-      carrousel.position = carrousel.swapRight(position,1);
+      carrousel.swapRight(carrousel.images,1);
     }
     carrousel.btnActive(carrousel.position);
   },
   swapRight(images,nbrSwap){
     for (let i = 0; i < images.length; i++) {
       let min = (i+1) * (-carrousel.decalagePosition);
-      let max = ((images.length-2) * carrousel.decalagePosition) - (i * carrousel.decalagePosition);
+      let max = ((images.length-2) * carrousel.decalagePosition) - (i * carrousel.decalagePosition);      
       if(carrousel.decalageImages[i] - (nbrSwap*carrousel.decalagePosition) < min){
         carrousel.decalageImages[i] = max - ((nbrSwap*carrousel.decalagePosition)-(carrousel.decalageImages[i]-min)-100);
         images[i].style.transform = 'translateX(' + carrousel.decalageImages[i] + 'vw)';
@@ -154,17 +145,15 @@ var carrousel = {
     for (let i = 0; i < images.length; i++) {
       let min = (i+1) * (-carrousel.decalagePosition);
       let max = ((images.length-2) * carrousel.decalagePosition) - (i * carrousel.decalagePosition);
-      if(i===images.length-1 && carrousel.decalageImages[0] === 100){
-        carrousel.decalageImages[i] = min;
-        images[i].style.transform = 'translateX(' + carrousel.decalageImages[i] + 'vw)';
-      }
       if(carrousel.decalageImages[i] +(nbrSwap*carrousel.decalagePosition) > max){
-        //calcul pas encore bon pour le left multi swap
-        carrousel.decalageImages[i] = min - ((nbrSwap*carrousel.decalagePosition)-(max - carrousel.decalageImages[i])-100);
+        carrousel.decalageImages[i] = min + ((nbrSwap*carrousel.decalagePosition)-(max - carrousel.decalageImages[i])-100);
         images[i].style.transform = 'translateX(' + carrousel.decalageImages[i] + 'vw)';
       }else{        
-        carrousel.decalageImages[i]+= carrousel.decalagePosition;
+        carrousel.decalageImages[i]+= nbrSwap*carrousel.decalagePosition;
         images[i].style.transform = 'translateX(' + carrousel.decalageImages[i] + 'vw)';
+      }
+      if(carrousel.decalageImages[i] === min +100){
+        carrousel.carrousetContainer.querySelector('.carrousel__img').style.transition= '1000ms';
       }
     }
     if(carrousel.position - nbrSwap < 0){
