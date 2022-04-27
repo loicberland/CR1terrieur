@@ -80,7 +80,7 @@
     height: 600px;
     background-size: cover;
     background-position: center;
-    transition: 1000ms;
+    /* transition: 1000ms; */
 }
 .carrousel__img1{
     background-image: url(/img/carrousel/1.jpg);
