@@ -241,12 +241,14 @@ const carrousel = {
     carrousel.images[carrousel.position].style.transform = '';
     carrousel.carrousetContainer.prepend(carrousel.images[carrousel.position]);
     carrousel.images[where].after(carrousel.images[who]);
-    // debugger;
     this.moveRight(who,where);
-
+    
   },
   moveRight(who){
-    carrousel.images[who].style.transform = 'translateX(-' + carrousel.decalagePosition + 'vw)';
+    // debugger;
+    setTimeout(() => {
+      carrousel.images[who].style.transform = 'translateX(-' + carrousel.decalagePosition + 'vw)';
+    }, 100);
     carrousel.position = who;
     carrousel.btnActive(carrousel.position);
   },
