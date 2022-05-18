@@ -54,10 +54,11 @@
 }
 .card__title{
     text-align: center;
-    font-family: var(--title--font-family);
+    /* font-family: var(--title--font-family); */
     text-transform: uppercase;
-    letter-spacing: 0.15rem;
+    letter-spacing: 0.1rem;
     margin-bottom: 1rem;
+    
 }
 .card__text{
     line-height: 2em;
@@ -125,8 +126,8 @@
 .carrousel__link{
     display: inline-block;
     background-color: rgba(0, 0, 0, 0.3) ;
-    width: 0.8rem;
-    height: 0.8rem;
+    width: 0.6rem;
+    height: 0.6rem;
     border-radius: 25px;
     transition: 200ms;
     margin: 0.15rem;

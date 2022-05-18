@@ -180,13 +180,16 @@ var carrouselElement = {
 
 const carrousel = {
   init(){
-    this.width = this.makeSizeContainer(this.carrousetContainer);
+    this.width = this.makeSizeContainer(this.carrouselContainer);
     this.createArray(this.decalageImages,this.images.length);
-    this.btn=this.drawNavBtn(this.images.length,this.carrouselId);  
+    this.btn=this.drawNavBtn(this.images.length,this.carrouselId); 
+    setInterval(() => {
+      this.moveAuto(); 
+    }, carrousel.delayAutoSwap);
     this.btnChoseImg();
   },
   carrouselId : carrouselElement.carrousel,
-  carrousetContainer : carrouselElement.getFirstChild(),
+  carrouselContainer : carrouselElement.getFirstChild(),
   images : carrouselElement.getImg(),
   btn : '',
   position : 0,
@@ -233,21 +236,26 @@ const carrousel = {
     let li = carrousel.btn.querySelectorAll('.carrousel__link');
     li.forEach((value,index) => {
       value.addEventListener('click',()=>{
-        carrousel.moveImg(index,carrousel.position);
+        carrousel.moveRight(index,carrousel.position);
       });
     });
   },
-  moveImg(who,where){
-    carrousel.images[carrousel.position].style.transform = '';
-    carrousel.carrousetContainer.prepend(carrousel.images[carrousel.position]);
-    carrousel.images[where].after(carrousel.images[who]);
-    this.moveRight(who,where);
-    
+  moveAuto(){
+    if(carrousel.position===carrousel.images.length-1){
+      carrousel.moveRight(0,carrousel.position);
+    }else{
+      carrousel.moveRight(carrousel.position+1,carrousel.position);
+    }
   },
-  moveRight(who){
-    // debugger;
+  moveRight(who,where){
+    carrousel.images[where].style.transform = '';
+    carrousel.carrouselContainer.prepend(carrousel.images[where]);
+    carrousel.images[where].after(carrousel.images[who]);
+    this.move(who,-carrousel.decalagePosition);    
+  },
+  move(who,how){
     setTimeout(() => {
-      carrousel.images[who].style.transform = 'translateX(-' + carrousel.decalagePosition + 'vw)';
+      carrousel.images[who].style.transform = 'translateX(' + how + 'vw)';
     }, 100);
     carrousel.position = who;
     carrousel.btnActive(carrousel.position);
