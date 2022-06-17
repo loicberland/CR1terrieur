@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- font Nunito équivalent avenir -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap" rel="stylesheet"> 
+    
+    <!-- font cabin équivalent brandon -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"> 
+
+    <script src="/js/app.js" defer></script>
+    <!-- Carrousel slick -->
+    <link rel="stylesheet" type="text/css" href="/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="/slick/slick-theme.css"/>
+    
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/hamburger-icon.css">
+    <link rel="stylesheet" href="/css/head-foot.css">
+    <link rel="stylesheet" href="/css/head-foot-responsive.css">
+    <link rel="stylesheet" href="/css/accueil.css">
+    <link rel="stylesheet" href="/css/accueil-responsive.css">
+
+    <title>CR1terieur</title>
+</head>
+<body>
+    <%- include('mention') %> 
+    <%- include('politique') %>     
+    <div id="body">
+        <header class="header">
+            <img class="header__brand" src="/img/LOGO_Vierge.png" alt="Logo CR">
+            <img class="header__full-brand" src="/img/LOGO.png" alt="Logo CR Concepteur, Aménageur d'intérieur">
+            <h1 class="header__title">Concepteur, Aménageur d'intérieur</h1>
+            <input class="nav__burger-toggle" type="checkbox" id="responsive-menu">
+            <label for="responsive-menu" class="nav__burger" ><span class="menu-icon"></span></label>
+            <nav class="nav">
+                <ul class="nav__navbar">
+                    <li class="nav__navbar-list"><a class="nav__navbar-link" href="/home">Accueil</a></li>
+                    <li class="nav__navbar-list"><a class="nav__navbar-link" href="#">Prestations</a></li>
+                    <li class="nav__navbar-list"><a class="nav__navbar-link" href="#">Réalisation</a></li>
+                    <li class="nav__navbar-list"><a class="nav__navbar-link" href="#">À propos</a></li>
+                    <li class="nav__navbar-list"><a class="nav__navbar-link" href="#">Contact</a></li>
+                </ul>
+                <div class="nav__contact">
+                    <a class="nav__contact-mail" href="mailto:cr_interieur@hotmail.com">cr_interieur@hotmail.com</a>
+                    <span class="nav__contact-phone">06 69 07 32 64</span>
+                </div>
+            </nav>
+        </header>

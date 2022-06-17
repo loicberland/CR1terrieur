@@ -1,6 +1,7 @@
 require('dotenv').config()
 
-const express = require('express')
+const express = require('express');
+const { route } = require('./app/router');
 const app = express()
 const router = require('./app/router')
 
@@ -9,8 +10,10 @@ app.set("views", "./app/views");
 
 app.use(express.static("./public"));
 
+app.use(router);
+
 app.use((req,res)=>{
-  res.status(404).render('home');
+  res.status(404).render('404');
 })
 
 app.listen(process.env.PORT, () =>{
