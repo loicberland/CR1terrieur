@@ -2,7 +2,7 @@
     text-align: center;
     margin: 2rem auto 4rem;
 }
-.acceuil__who{
+.accueil__headBand{
     background-color: var(--primary-bgc-color);
     color: var(--primary-light-color);
     text-align: center;
@@ -13,22 +13,38 @@
     background-size: cover;
     font-size: 1.7rem;
 }
-.acceuil__who-title{
+.accueil__headBand-title{
     font-family: var(--title--font-family);
     color: var(--primary-light-color);
     text-transform: uppercase;
     letter-spacing: 0.4rem;
     margin-bottom: 2rem;
 }
-.acceuil__who-text{
+.accueil__headBand-text{
     color: var(--primary-light-color);
     font-size: 0.5em;
     line-height: 2rem;
     margin-bottom: 2rem;
 }
-.acceuil__who-place{
+.accueil__headBand-place{
     color: var(--primary-light-color);
     font-size: 0.5em;
+}
+.acceuil__detail{
+    padding: 2rem 0.8rem;
+}
+.acceuil__detail div{
+    padding-bottom: 1.9rem;
+}
+.acceuil__detail-title{
+    font-size: 1.2em;
+    line-height: 2rem;
+
+}
+.accueil__detail-text{
+    font-size: 0.8em;
+    line-height: 1.5rem;
+
 }
 .accueil__cards{
     padding: 3rem 2rem;
@@ -67,57 +83,63 @@
     font-size: 0.8em;
 }
 
-.carrousel{
+/* .carrousel{
     position: relative;
     height: 600px;
     overflow: hidden;
 }
 .carrousel__container{
     height: 600px;
-}
-.carrousel__img{
+} */
+
+/* .carrousel__img{
     float: left;
     width: 100vw;
     height: 600px;
     background-size: cover;
     background-position: center;
     transition: transform 0.8s;
-}
+} */
+.carrousel_items{
+    height: 800px;
+    background-size: cover;
+    background-position: center;
+} 
 .carrousel__img1{
-    background-image: url(/img/carrousel/1.jpg);
+    background-image: url('../img/carrousel/1.jpg');
 }
 .carrousel__img2{
-    background-image: url(/img/carrousel/2.jpg);
+    background-image: url('../img/carrousel/2.jpg');
 }
 .carrousel__img3{
-    background-image: url(/img/carrousel/3.jpg);
+    background-image: url('../img/carrousel/3.jpg');
 }
 .carrousel__img4{
-    background-image: url(/img/carrousel/4.jpg);
+    background-image: url('../img/carrousel/4.jpg');
 }
 .carrousel__img5{
-    background-image: url(/img/carrousel/5.jpg);
+    background-image: url('../img/carrousel/5.jpg');
 }
 .carrousel__img6{
-    background-image: url(/img/carrousel/6.png);
+    background-image: url('../img/carrousel/6.png');
 }
 .carrousel__img7{
-    background-image: url(/img/carrousel/7.jpg);
+    background-image: url('../img/carrousel/7.jpg');
 }
 .carrousel__img8{
-    background-image: url(/img/carrousel/8.jpg);
+    background-image: url('../img/carrousel/8.jpg');
 }
 .carrousel__img9{
-    background-image: url(/img/carrousel/9.jpg);
+    background-image: url('../img/carrousel/9.jpg');
 }
 .carrousel__img10{
-    background-image: url(/img/carrousel/10.jpg);
+    background-image: url('../img/carrousel/10.jpg');
 }
 .carrousel__img11{
-    background-image: url(/img/carrousel/11.jpg);
+    background-image: url('../img/carrousel/11.jpg');
 }
 
-.carrousel__nav{
+/* .carrousel__nav{
     position: absolute;
     text-align: center;
     bottom: 0;
@@ -137,4 +159,4 @@
 }
 .carrousel__link:hover{
     transform: scale(1.3);
-}
+} */
