@@ -1,3 +1,35 @@
 <%- include('partials/header') %>
-<h1>contact</h1>
+<main class="contact">
+    <div class="contact__container">
+        <h1 class="title">CONTACT</h1>
+        <h3 class="subtitle">" Les plus beaux projets sont les vôtres "</h3>
+        <p class="text">Contact par téléphone, mail ou via le formulaire ci-joint.</p>
+        <div class="footer__about-contact">
+            <a class="footer__about-mail" href="mailto:cr_interieur@hotmail.com">cr_interieur@hotmail.com</a>
+            <span class="footer__about-phone">06 69 07 32 64</span>
+            <a class="footer__about-insta" target="_blank" href="https://www.instagram.com/cr_interieur/"></a>
+        </div>
+        <form class="contact__form" method="push">
+            <label class="contact__form-label" for="lastname" required>Nom *</label>
+            <input class="contact__form-input" type="text" name="lastname" id="lastname" placeholder="Saisissez votre nom">
+
+            <label class="contact__form-label" for="firstname" required>Prénom *</label>
+            <input class="contact__form-input" type="text" name="firstname" id="firstname" placeholder="Saisissez votre prénom">
+
+            <label class="contact__form-label" for="email" required>E-mail *</label>
+            <input class="contact__form-input" type="email" name="email" id="email" placeholder="Saisissez votre e-mail">
+
+            <label class="contact__form-label" for="phone">Téléphone</label>
+            <input class="contact__form-input" type="tel" name="phone" id="phone" placeholder="Saisissez votre numéro de téléphone">
+
+            <label class="contact__form-label" for="projectTitle">Projet</label>
+            <input class="contact__form-input" type="text" name="projectTitle" id="projectTitle" placeholder="Saisissez votre projet">
+
+            <label class="contact__form-label" for="message">Message</label>
+            <textarea class="contact__form-input" id="message" name="message" rows="5" cols="33" placeholder="Rédigez votre message ici..."></textarea>
+
+            <input class="contact__form-submit" type="submit" value="Envoyer">
+        </form>
+    </div>
+</main>
 <%- include('partials/footer') %>
