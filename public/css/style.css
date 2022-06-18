@@ -2,6 +2,23 @@
     text-align: center;
     margin: 2rem auto 4rem;
 }
+.title{
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    margin: 2rem 0;
+    font-size: 1.8rem;
+}
+.subtitle{
+    font-weight: bold;
+    font-size: 0.8em;
+    margin-bottom: 3rem;
+}
+.text{
+    line-height: 2em;
+    font-weight: lighter;
+    font-size: 0.8em;
+    margin: 2rem 0;
+}
 .band{
     text-align: center;
     font-size: 1.7rem;
@@ -63,11 +80,26 @@
     justify-content: center;
     gap: 1rem;
 }
-
 .intro{
     margin-bottom: 6rem;
 }
-
+.about{
+    margin: 7rem auto;
+    text-align: center;
+    max-width: 50vw;
+}
+.about a{
+    text-decoration: underline;
+}
+.about__subtitle{
+    margin-bottom: 4rem;
+}
+.about__subtitle-strong{
+    font-weight: bold;
+}
+.about__coop{
+    margin-top: 7rem;
+}
 .card-v{
     display: flex;
     flex-direction: column;
