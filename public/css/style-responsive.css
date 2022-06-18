@@ -2,7 +2,7 @@
     .accueil__cards{
         justify-content: space-around;
     }
-    .card{
+    .card-v{
         width: 40%;
         font-size: 1rem;
     }
@@ -17,10 +17,10 @@
     .accueil__cards{
         justify-content: center;
     }
-    .card{
+    .card-v{
         width: 20%;
     }
-    .acceuil__who{
+    .accueil__who{
         background-size: contain;
     }
     

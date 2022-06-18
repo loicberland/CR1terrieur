@@ -1,42 +1,52 @@
-.acceuil__quote{
+.accueil__quote{
     text-align: center;
     margin: 2rem auto 4rem;
 }
-.accueil__headBand{
-    background-color: var(--primary-bgc-color);
-    color: var(--primary-light-color);
+.band{
     text-align: center;
-    padding: 3rem 2rem 7rem;
-    background-image: url(../img/LOGO_Vierge\ -\ Haut.png);
-    background-repeat: no-repeat;
-    background-position: bottom;
-    background-size: cover;
     font-size: 1.7rem;
+    padding: 5rem 0;
 }
-.accueil__headBand-title{
-    font-family: var(--title--font-family);
-    color: var(--primary-light-color);
+.band-title{
     text-transform: uppercase;
     letter-spacing: 0.4rem;
     margin-bottom: 2rem;
 }
-.accueil__headBand-text{
-    color: var(--primary-light-color);
+.band-text{
+    font-size: 0.6em;
+    line-height: 1.5rem;
+}
+.accueil .band-place{
     font-size: 0.5em;
+}
+.accueil .band{
+    background-color: var(--primary-bgc-color);
+    color: var(--primary-light-color);
+    background-image: url(../img/home/LOGO_Vierge\ -\ Haut.png);
+    padding: 3rem 2rem 7rem;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+}
+.accueil .band-title{
+    font-family: var(--title--font-family);
+    color: var(--primary-light-color);
+}
+.accueil .band-text{
+    color: var(--primary-light-color);
     line-height: 2rem;
     margin-bottom: 2rem;
 }
-.accueil__headBand-place{
+.accueil .band-place{
     color: var(--primary-light-color);
-    font-size: 0.5em;
 }
-.acceuil__detail{
+.accueil__detail{
     padding: 2rem 0.8rem;
 }
-.acceuil__detail div{
+.accueil__detail div{
     padding-bottom: 1.9rem;
 }
-.acceuil__detail-title{
+.accueil__detail-title{
     font-size: 1.2em;
     line-height: 2rem;
 
@@ -53,7 +63,12 @@
     justify-content: center;
     gap: 1rem;
 }
-.card{
+
+.intro{
+    margin-bottom: 6rem;
+}
+
+.card-v{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -61,45 +76,51 @@
     width: 80vw;
     margin-top: 1rem;
 }
-.card__img{    
+.card-v .card__content{
+    text-align: center;
+}
+.card-h{
+    margin: 4rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 50vw;
+}
+.card-h .card__content{
+    text-align: end;
+}
+.card__content{
+    text-align: center;
+}
+.card__img-p{    
     margin-bottom: 1rem;
     width: 250px;
     height: 250px;
     object-fit: cover;
     object-position: top;
 }
+.card__img{
+    min-width: 460px;
+    object-fit: cover;
+    object-position: 50% 50%;
+
+}
 .card__title{
-    text-align: center;
-    /* font-family: var(--title--font-family); */
     text-transform: uppercase;
     letter-spacing: 0.1rem;
     margin-bottom: 1rem;
     
 }
+.card__subtitle{
+    font-weight: bold;
+    font-size: 0.8em;
+    margin-bottom: 1rem;
+}
 .card__text{
     line-height: 2em;
     font-weight: lighter;
-    text-align: center;
     font-size: 0.8em;
 }
-
-/* .carrousel{
-    position: relative;
-    height: 600px;
-    overflow: hidden;
-}
-.carrousel__container{
-    height: 600px;
-} */
-
-/* .carrousel__img{
-    float: left;
-    width: 100vw;
-    height: 600px;
-    background-size: cover;
-    background-position: center;
-    transition: transform 0.8s;
-} */
 .carrousel_items{
     height: 800px;
     background-size: cover;
@@ -138,25 +159,3 @@
 .carrousel__img11{
     background-image: url('../img/carrousel/11.jpg');
 }
-
-/* .carrousel__nav{
-    position: absolute;
-    text-align: center;
-    bottom: 0;
-    width: 100%;
-}
-.carrousel__link{
-    display: inline-block;
-    background-color: rgba(0, 0, 0, 0.3) ;
-    width: 0.6rem;
-    height: 0.6rem;
-    border-radius: 25px;
-    transition: 200ms;
-    margin: 0.15rem;
-}
-.carrousel__link:hover, .carrousel__active{
-    background-color: var(--primary-light-color) ;
-}
-.carrousel__link:hover{
-    transform: scale(1.3);
-} */

@@ -109,7 +109,7 @@
     color: var(--primary-color);
 }
 .footer__about-insta{
-    background-image: url(../img/Instagram.webp);
+    background-image: url(../img/headFoot/Instagram.webp);
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -117,7 +117,7 @@
 }
 
 @keyframes backgroundIMG-insta {
-    100% { background-image: url(../img/580b57fcd9996e24bc43c521.png); }
+    100% { background-image: url(../img/headFoot/instaColor.png); }
 }
 
 .footer__about-insta:hover{

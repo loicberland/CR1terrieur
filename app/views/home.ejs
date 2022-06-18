@@ -1,20 +1,5 @@
 <%- include('partials/header') %> 
         <main class="accueil">
-            <!-- <div id="main-carrousel" class="carrousel">
-                <div class="carrousel__container">
-                    <div class="carrousel__img carrousel__img1"></div>
-                    <div class="carrousel__img carrousel__img2"></div>
-                    <div class="carrousel__img carrousel__img3"></div>
-                    <div class="carrousel__img carrousel__img4"></div>
-                    <div class="carrousel__img carrousel__img5"></div>
-                    <div class="carrousel__img carrousel__img6"></div>
-                    <div class="carrousel__img carrousel__img7"></div>
-                    <div class="carrousel__img carrousel__img8"></div>
-                    <div class="carrousel__img carrousel__img9"></div>
-                    <div class="carrousel__img carrousel__img10"></div>
-                    <div class="carrousel__img carrousel__img11"></div>
-                </div>
-            </div>-->
             <div class="slick-carousel">
                 <div class="carrousel_items carrousel__img1"></div>
                 <div class="carrousel_items carrousel__img2"></div>
@@ -28,63 +13,71 @@
                 <div class="carrousel_items carrousel__img10"></div>
                 <div class="carrousel_items carrousel__img11"></div>
             </div> 
-            <p class="acceuil__quote">Création projets - Gestion travaux - Permis de construire</p>
-            <section class="accueil__headBand">
-                <h2 class="accueil__headBand-title">POUR QUI, POUR QUOI</h2>
-                <p class="accueil__headBand-text">Pour les particuliers et professionnels indépendants <br> Pour les petits, moyens et grands projets</p>
-                <p class="accueil__headBand-place">Lyon et sa région</p>
+            <p class="accueil__quote">Création projets - Gestion travaux - Permis de construire</p>
+            <section class="band">
+                <h2 class="band-title">POUR QUI, POUR QUOI</h2>
+                <p class="band-text">Pour les particuliers et professionnels indépendants <br> Pour les petits, moyens et grands projets</p>
+                <p class="band-place">Lyon et sa région</p>
             </section>
             <section class="accueil__cards">
-                <article class="card">
-                    <img class="card__img" src="./img/Agencement sur mesure.JPG" alt="">
-                    <h3 class="card__title">AGENCEMENT SUR MESURE</h3>
-                    <p class="card__text">Cuisine, meuble vasque, dressing, tête de lit, bibliothèque, bureau, cheminée, escalier ...</p>
+                <article class="card-v">
+                    <img class="card__img-p" src="./img/home/Agencement sur mesure.JPG" alt="chambre avec lit et mur en brique">
+                    <div class="card__content">
+                        <h3 class="card__title">AGENCEMENT SUR MESURE</h3>
+                        <p class="card__text">Cuisine, meuble vasque, dressing, tête de lit, bibliothèque, bureau, cheminée, escalier ...</p>
+                    </div>
                 </article>
-                <article class="card">
-                    <img class="card__img" src="./img/reamenagement espace int.jpg" alt="">
-                    <h3 class="card__title">RÉAMÉNAGEMENT DES ESPACES INTÉRIEURS</h3>
-                    <p class="card__text">Ouverture d’une cuisine sur séjour,
-                        Création d’une suite parentale, d’une chambre bébé, d’une dépendance pour la location,
-                        Redistribution et optimisation des pièces ...</p>
-                    </article>
-                    <article class="card">
-                        <img class="card__img" src="./img/renovation dinterieur.jpg" alt="">
+                <article class="card-v">
+                    <img class="card__img-p" src="./img/home/reamenagement espace int.jpg" alt="Plan couleur avec séparation pièce des portes coulissantes">
+                    <div class="card__content">
+                        <h3 class="card__title">RÉAMÉNAGEMENT DES ESPACES INTÉRIEURS</h3>
+                        <p class="card__text">Ouverture d’une cuisine sur séjour,
+                            Création d’une suite parentale, d’une chambre bébé, d’une dépendance pour la location,
+                            Redistribution et optimisation des pièces ...</p>
+                    </div>    
+                </article>
+                <article class="card-v">
+                    <img class="card__img-p" src="./img/home/renovation dinterieur.jpg" alt="Bas de lit avec nouvelle moquette au sol">
+                    <div class="card__content">
                         <h3 class="card__title">RÉNOVATION D’INTÉRIEUR</h3>
-                    <p class="card__text">Modernisation d’une salle de bain, changement des revêtements de sols,
+                        <p class="card__text">Modernisation d’une salle de bain, changement des revêtements de sols,
                         amélioration énergétique, rénovation totale d’une habitation ...</p>
+                    </div>    
                 </article>
-                <article class="card">
-                    <img class="card__img" src="./img/dossier de plans de permis.jpg" alt="">
-                    <h3 class="card__title">DOSSIER DE PLANS DE PERMIS DE CONSTRUIRE *</h3>
-                    <p class="card__text">Extension, intégration d’une véranda, création d’une baie vitrée, modification de façade, démolition ...
-                        <br>
-                        * Plans réglementaires, photos et notice nécessaires aux dossiers de demande de permis de construire ou déclaration préalable de travaux d'une surface habitable inférieure à 150m.</p>
+                <article class="card-v">
+                    <img class="card__img-p" src="./img/home/dossier de plans de permis.jpg" alt="Façade avant maison refaite">
+                    <div class="card__content">
+                        <h3 class="card__title">DOSSIER DE PLANS DE PERMIS DE CONSTRUIRE *</h3>
+                        <p class="card__text">Extension, intégration d’une véranda, création d’une baie vitrée, modification de façade, démolition ...
+                            <br>
+                            * Plans réglementaires, photos et notice nécessaires aux dossiers de demande de permis de construire ou déclaration préalable de travaux d'une surface habitable inférieure à 150m.</p>
+                    </div>
                 </article>
             </section>
-            <section class="accueil__headBand">
-                <h2 class="accueil__headBand-title">VOTRE PROJET AVEC CR INTÉRIEUR</h2>
-                <p class="accueil__headBand-text">La clé de la réussite de votre projet</p>
+            <section class="band">
+                <h2 class="band-title">VOTRE PROJET AVEC CR INTÉRIEUR</h2>
+                <p class="band-text">La clé de la réussite de votre projet</p>
             </section>
-            <section class="acceuil__detail">
+            <section class="accueil__detail">
                 <div>
-                    <h3 class="acceuil__detail-title">UNE SEULE INTERLOCUTRICE</h3>
+                    <h3 class="accueil__detail-title">UNE SEULE INTERLOCUTRICE</h3>
                     <p class="accueil__detail-text" >Céline : je suis à la fois conceptrice de projet, technicienne d'étude et coordinatrice de travaux.</p>
                     <p class="accueil__detail-text" >Je vous offre un accompagnement personnalisé : vous êtes serein à chaque étape.</p>
                 </div>
                 <div>
-                    <h3 class="acceuil__detail-title">UN CHOIX ENTRE DEUX VERSIONS</h3>
+                    <h3 class="accueil__detail-title">UN CHOIX ENTRE DEUX VERSIONS</h3>
                     <p class="accueil__detail-text" >Je vous propose les solutions les plus adaptées avec une vision évolutive, dans le but d'aboutir à un projet qui vous correspond vraiment.</p>
                 </div>
                 <div>
-                    <h3 class="acceuil__detail-title">UN TRACÉ À LA MAIN AUTHENTIQUE</h3>
+                    <h3 class="accueil__detail-title">UN TRACÉ À LA MAIN AUTHENTIQUE</h3>
                     <p class="accueil__detail-text" >Mes dessins sont à la fois réalistes et saisissants : votre projet prend vie sur papier, vous permettant ainsi de vous projeter pleinement.</p>
                 </div>
                 <div>
-                    <h3 class="acceuil__detail-title">UNE MAÎTRISE TECHNIQUE</h3>
+                    <h3 class="accueil__detail-title">UNE MAÎTRISE TECHNIQUE</h3>
                     <p class="accueil__detail-text" >Je vous donne l’assurance d’une prestation menée avec rigueur, tout est pris en compte pour une réalisation aboutie jusque dans les moindres finitions.</p>
                 </div>
                 <div>
-                    <h3 class="acceuil__detail-title">8 ANS DE SAVOIR-FAIRE</h3>
+                    <h3 class="accueil__detail-title">8 ANS DE SAVOIR-FAIRE</h3>
                     <p class="accueil__detail-text" >Mon expérience variée dans le domaine de l'architecture d'intérieur me permet de créer des projets uniques, à l'image de vos envies et de vos attentes.</p>
                 </div>
             </section>
