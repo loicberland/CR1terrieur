@@ -1,36 +1,14 @@
 <%- include('partials/header') %>
 <main class="realization">
     <div class="grid grid-2">
-        <div class="grid__items">
-            <a class="grid__link" href="/">
-                <div class="grid__titleContainer"></div>
-                <img class="grid__img" src="/img/realizations/1/DSCN0015.JPG" alt="">
-            </a>
-        </div>
-        <div class="grid__items">
-            <a class="grid__link" href="/">
-                <div class="grid__titleContainer"></div>
-                <img class="grid__img" src="/img/realizations/1/DSCN0015.JPG" alt="">
-            </a>
-        </div>
-        <div class="grid__items">
-            <a class="grid__link" href="/">
-                <div class="grid__titleContainer"></div>
-                <img class="grid__img" src="/img/realizations/1/DSCN0015.JPG" alt="">
-            </a>
-        </div>
-        <div class="grid__items">
-            <a class="grid__link" href="/">
-                <div class="grid__titleContainer"></div>
-                <img class="grid__img" src="/img/realizations/1/DSCN0015.JPG" alt="">
-            </a>
-        </div>
-        <div class="grid__items">
-            <a class="grid__link" href="/">
-                <div class="grid__titleContainer"></div>
-                <img class="grid__img" src="/img/realizations/1/DSCN0015.JPG" alt="">
-            </a>
-        </div>
+        <% for(const image of realization.images){ %> 
+            <div class="grid__items">
+                <a class="grid__link" href="/">
+                    <div class="grid__titleContainer"></div>
+                    <img class="grid__img" src="<%= image.link %> " alt="<%= image.title %> ">
+                </a>
+            </div>
+        <% } %> 
         <%# Image de cloture %> 
         <div class="grid__items">
             <a class="grid__link" href="/">

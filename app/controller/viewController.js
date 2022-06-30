@@ -5,9 +5,9 @@ const viewController = {
   getservices: function(req,res){
     res.render('services')
   },
-  getAchievements: function(req,res){
-    res.render('realizations')
-  },
+  // getAchievements: function(req,res){
+  //   res.render('realizations')
+  // },
   getAbout: function(req,res){
     res.render('about')
   },

@@ -1,4 +1,12 @@
-const{ Models, DataTypes } = require('sequelize');
+const{ Model, DataTypes } = require('sequelize');
 const sequelize = require('../database');
 
-const realization
+class Realization extends Model{}
+Realization.init({
+  title: DataTypes.STRING,
+},{
+  sequelize,
+  tableName:"realization"
+})
+
+module.exports = Realization
