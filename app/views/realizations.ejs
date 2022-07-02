@@ -14,7 +14,13 @@
         <% } %> 
         <%# Image de cloture %> 
         <div class="grid__items">
-            <img class="grid__img" src="/img/realizations/LOGO.jpg" alt="">
+            <% if(locals.user){ %> 
+                <img class="grid__img" src="/img/realizations/LOGO.jpg" alt="Logo CR">
+            <% }else{ %>
+                <a href="/realizations/add">
+                    <img class="grid__img" src="/img/realizations/addButton.png" alt="Logo CR">
+                </a>
+            <% } %> 
         </div>
     </div>
 </main>

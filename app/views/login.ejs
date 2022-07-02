@@ -1,0 +1,22 @@
+<%- include('partials/header') %>
+<main class="contact">
+    <div class="contact__container">
+        <h1 class="title">CONNECTION</h1>
+        <% if(locals.error){ %> 
+            <div class="login__error">
+                <p class="login__error-text"><%= error %> </p>
+            </div>
+        <% } %> 
+        <form action="/admin" class="contact__form" method="POST">
+
+            <label class="contact__form-label" for="email" required>E-mail *</label>
+            <input class="contact__form-input" type="email" name="email" id="email" placeholder="Saisissez votre e-mail">
+            
+            <label class="contact__form-label" for="password" required>Mot de passe *</label>
+            <input class="contact__form-input" type="password" name="password" id="password" placeholder="***********">
+
+            <input class="contact__form-submit" type="submit" value="Envoyer">
+        </form>
+    </div>
+</main>
+<%- include('partials/footer') %>

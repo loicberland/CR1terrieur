@@ -1,6 +1,6 @@
 BEGIN;
 
-DROP TABLE IF EXISTS "realization", "image";
+DROP TABLE IF EXISTS "realization", "image", "user";
 CREATE TABLE "realization"(
     "id" INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
     "title" VARCHAR(255) NOT NULL,
@@ -16,10 +16,19 @@ CREATE TABLE "image"(
     "created_at" TIMESTAMPTZ NOT NULL DEFAULT NOW(),
     "updated_at" TIMESTAMPTZ
 );
+CREATE TABLE "user"(
+    "id" INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
+    "email" TEXT NOT NULL UNIQUE,
+    "password" TEXT NOT NULL UNIQUE,
+    "created_at" TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+    "updated_at" TIMESTAMPTZ
+);
 ALTER TABLE "realization"
     ADD "image_id" INTEGER UNIQUE REFERENCES "image";
 
 -- seeding
+INSERT INTO "user"("email","password") VALUES --mdp : test
+('berland.loic@yahoo.fr','$2a$10$FlWfDzFcjAxZzyCurLbYueboxRwAHdPoW89v3MkT23FA0p1pTXBBG');
 INSERT INTO "realization"("title") VALUES
 ('Rea_1'),
 ('Rea_2');

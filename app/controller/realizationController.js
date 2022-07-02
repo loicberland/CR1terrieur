@@ -14,6 +14,9 @@ const realizationController = {
   },
   findOne: async function(req,res){
     const id = req.params.id;
+    if(isNaN(id) && id){
+      return res.render('404')
+    }
     try {
       const realization = await Realization.findByPk(id,{
         include:"images"
@@ -23,6 +26,9 @@ const realizationController = {
       console.error(error)
       res.status(500).send(`Impossible de récupérer la réalisation`)
     }
+  },
+  addOne: function(req,res){
+    res.render('addRealization')
   },
 }
 module.exports = realizationController;

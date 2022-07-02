@@ -1,0 +1,13 @@
+<%- include('partials/header') %>
+<main class="contact">
+    <div class="contact__container">
+        <h1 class="title">NOUVELLE REALISATION</h1>
+        <form action="/contact" class="contact__form" method="push">
+            <label class="contact__form-label" for="name" required>Nom</label>
+            <input class="contact__form-input" type="text" name="name" id="name" placeholder="Saisissez votre nom de réalisation">
+
+            <input class="contact__form-submit" type="submit" value="Envoyer">
+        </form>
+    </div>
+</main>
+<%- include('partials/footer') %>

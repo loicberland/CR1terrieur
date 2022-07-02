@@ -1,6 +1,8 @@
 :
-belong, 11 realisation, 01 images: imagePrincipale
+belong, 11 realisation, 01 image: imagePrincipale
 
 realisation: codeRealisation, titre
-contains, 1N realisation, 01 images: listeImages
-images: codeImage, title, lien,
+contains, 1N realisation, 01 image: listeImages
+image: codeImage, title, lien,
+
+user: email, password

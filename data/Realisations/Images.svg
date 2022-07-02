@@ -1,0 +1,81 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+<svg width="352" height="262" view_box="0 0 352 262"
+xmlns="http://www.w3.org/2000/svg"
+xmlns:link="http://www.w3.org/1999/xlink">\n\n<desc>Généré par Mocodo 2.3.7 le Sat, 02 Jul 2022 03:49:15</desc>
+
+<rect id="frame" x="0" y="0" width="352" height="262" fill="#f7f7f7" stroke="none" stroke-width="0"/>
+
+<!-- Association contains -->
+<line x1="62" y1="135" x2="190" y2="135" stroke="#5aae61" stroke-width="2"/>
+<text x="120" y="152.0" fill="#762a83" font-family="Verdana" font-size="12">1,N</text>
+<line x1="304" y1="135" x2="190" y2="135" stroke="#5aae61" stroke-width="2"/>
+<text x="239" y="152.0" fill="#762a83" font-family="Verdana" font-size="12">0,1</text>
+<g id="association-contains">
+	<path d="M 219 110 a 14 14 90 0 1 14 14 V 135 h -86 V 124 a 14 14 90 0 1 14 -14" fill="#a6dba0" stroke="#a6dba0" stroke-width="0"/>
+	<path d="M 233 135.0 v 11 a 14 14 90 0 1 -14 14 H 161 a 14 14 90 0 1 -14 -14 V 135.0 H 86" fill="#d9f0d3" stroke="#d9f0d3" stroke-width="0"/>
+	<rect x="147" y="110" width="86" height="50" fill="none" rx="14" stroke="#5aae61" stroke-width="2"/>
+	<line x1="147" y1="135" x2="233" y2="135" stroke="#5aae61" stroke-width="1"/>
+	<text x="164" y="127.7" fill="#000000" font-family="Verdana" font-size="12">contains</text>
+	<text x="154" y="152.8" fill="#000000" font-family="Verdana" font-size="12">listeImages</text>
+</g>
+
+<!-- Association belong -->
+<line x1="62" y1="135" x2="190" y2="34" stroke="#5aae61" stroke-width="2"/>
+<text x="84.9891914857" y="93" fill="#762a83" font-family="Verdana" font-size="12">1,1</text>
+<line x1="304" y1="135" x2="190" y2="34" stroke="#5aae61" stroke-width="2"/>
+<text x="239" y="110.979911506" fill="#762a83" font-family="Verdana" font-size="12">0,1</text>
+<g id="association-belong">
+	<path d="M 231 9 a 14 14 90 0 1 14 14 V 34 h -110 V 23 a 14 14 90 0 1 14 -14" fill="#a6dba0" stroke="#a6dba0" stroke-width="0"/>
+	<path d="M 245 34.0 v 11 a 14 14 90 0 1 -14 14 H 149 a 14 14 90 0 1 -14 -14 V 34.0 H 110" fill="#d9f0d3" stroke="#d9f0d3" stroke-width="0"/>
+	<rect x="135" y="9" width="110" height="50" fill="none" rx="14" stroke="#5aae61" stroke-width="2"/>
+	<line x1="135" y1="34" x2="245" y2="34" stroke="#5aae61" stroke-width="1"/>
+	<text x="169" y="26.7" fill="#000000" font-family="Verdana" font-size="12">belong</text>
+	<text x="142" y="51.8" fill="#000000" font-family="Verdana" font-size="12">imagePrincipale</text>
+</g>
+
+<!-- Entity realisation -->
+<g id="entity-realisation">
+	<g id="frame-realisation">
+		<rect x="9" y="101" width="106" height="25" fill="#c2a5cf" stroke="#c2a5cf" stroke-width="0"/>
+		<rect x="9" y="126.0" width="106" height="43" fill="#e7d4e8" stroke="#e7d4e8" stroke-width="0"/>
+		<rect x="9" y="101" width="106" height="68" fill="none" stroke="#9970ab" stroke-width="2"/>
+		<line x1="9" y1="126" x2="115" y2="126" stroke="#9970ab" stroke-width="1"/>
+	</g>
+	<text x="30" y="118.7" fill="#000000" font-family="Verdana" font-size="12">realisation</text>
+	<text x="14" y="143.8" fill="#000000" font-family="Verdana" font-size="12">codeRealisation</text>
+	<line x1="14" y1="146" x2="109" y2="146" stroke="#000000" stroke-width="1"/>
+	<text x="14" y="160.8" fill="#000000" font-family="Verdana" font-size="12">titre</text>
+</g>
+
+<!-- Entity image -->
+<g id="entity-image">
+	<g id="frame-image">
+		<rect x="265" y="84" width="78" height="25" fill="#c2a5cf" stroke="#c2a5cf" stroke-width="0"/>
+		<rect x="265" y="109.0" width="78" height="77" fill="#e7d4e8" stroke="#e7d4e8" stroke-width="0"/>
+		<rect x="265" y="84" width="78" height="102" fill="none" stroke="#9970ab" stroke-width="2"/>
+		<line x1="265" y1="109" x2="343" y2="109" stroke="#9970ab" stroke-width="1"/>
+	</g>
+	<text x="285" y="101.7" fill="#000000" font-family="Verdana" font-size="12">image</text>
+	<text x="270" y="126.7" fill="#000000" font-family="Verdana" font-size="12">codeImage</text>
+	<line x1="270" y1="129" x2="338" y2="129" stroke="#000000" stroke-width="1"/>
+	<text x="270" y="143.8" fill="#000000" font-family="Verdana" font-size="12">title</text>
+	<text x="270" y="160.8" fill="#000000" font-family="Verdana" font-size="12">lien</text>
+</g>
+
+<!-- Entity user -->
+<g id="entity-user">
+	<g id="frame-user">
+		<rect x="156" y="185" width="68" height="25" fill="#c2a5cf" stroke="#c2a5cf" stroke-width="0"/>
+		<rect x="156" y="210.0" width="68" height="43" fill="#e7d4e8" stroke="#e7d4e8" stroke-width="0"/>
+		<rect x="156" y="185" width="68" height="68" fill="none" stroke="#9970ab" stroke-width="2"/>
+		<line x1="156" y1="210" x2="224" y2="210" stroke="#9970ab" stroke-width="1"/>
+	</g>
+	<text x="176" y="202.7" fill="#000000" font-family="Verdana" font-size="12">user</text>
+	<text x="161" y="227.8" fill="#000000" font-family="Verdana" font-size="12">email</text>
+	<line x1="161" y1="230" x2="195" y2="230" stroke="#000000" stroke-width="1"/>
+	<text x="161" y="244.8" fill="#000000" font-family="Verdana" font-size="12">password</text>
+</g>
+</svg>

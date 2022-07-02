@@ -278,3 +278,13 @@
 .grid__title{
     color: var(--primary-light-color);
 }
+
+.login__error{
+    background-color: var(--error-bgc-color);
+    border-radius: 0.5%;
+    margin: 1rem 0;
+}
+.login__error-text{
+    color: var(--error-color);
+    padding: 0.5rem;
+}

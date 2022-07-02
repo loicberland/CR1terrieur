@@ -1,5 +1,6 @@
 const Realization = require('./realization');
 const Image = require('./image');
+const User = require('./user');
 
 Realization.belongsTo(Image,{
   foreignKey: "image_id",
@@ -16,4 +17,4 @@ Image.belongsTo(Realization,{
   as: "realization"
 })
 
-module.exports = { Realization, Image }
+module.exports = { Realization, Image, User }
